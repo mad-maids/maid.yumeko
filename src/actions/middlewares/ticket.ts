@@ -55,7 +55,7 @@ composer.command("ticket", async (ctx: TelegrafContext) => {
                 [
                   Markup.urlButton(
                     `Check out your ticket...`,
-                    `https://t.me/maidsticket/${msg.message_id}`
+                    `https://t.me/maidsticket`
                   ),
                 ],
                 [
