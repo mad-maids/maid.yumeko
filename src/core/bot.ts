@@ -28,22 +28,19 @@ bot.use(session());
 console.clear();
 
 try {
-  if (env.ENVIRONMENT === "heroku") {
-    bot.telegram.deleteWebhook();
-    bot.launch();
-  }
-  // bot
-  //   .launch({
-  //     webhook: {
-  //       domain: env.DOMAIN,
-  //       hookPath: "/bot",
-  //       port: parseInt(env.PORT),
-  //     },
-  //   })
-  //   .then(async () => {
-  //     consoles.launch(env.ENVIRONMENT);
-  //   })
-  //   .catch((error: Error) => consoles.errors(error));
+  if (env.ENVIRONMENT === "heroku")
+    bot
+      .launch({
+        webhook: {
+          domain: env.DOMAIN,
+          hookPath: "/bot",
+          port: parseInt(env.PORT),
+        },
+      })
+      .then(async () => {
+        consoles.launch(env.ENVIRONMENT);
+      })
+      .catch((error: Error) => consoles.errors(error));
   else if (env.ENVIRONMENT === "local")
     bot
       .launch()
