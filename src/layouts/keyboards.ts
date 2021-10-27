@@ -10,7 +10,7 @@ export const start = Markup.inlineKeyboard([
 ]);
 
 export const help = Markup.inlineKeyboard([
-  [Markup.urlButton("Announcement's Channel", "https://t.me/SeventyPlus")],
+  [Markup.urlButton("Dev Team", "https://t.me/madmaids")],
 ]);
 
 export const invalid = Markup.inlineKeyboard([

@@ -52,7 +52,8 @@ composer.command("ticket", async (ctx: TelegrafContext) => {
               `<b>💠 Number:</b> <code>${ticket.number}</code> \n` +
               `<b>👤 Username:</b> <code>${ticket.username}</code> <code>(you)</code> \n` +
               `<b>📆 Date:</b> <code>30/10/2021</code> \n` +
-              `<b>🍿 Anime:</b> <a href="https://en.wikipedia.org/wiki/5_Centimeters_per_Second">Byosoku 5 senchimetoru</a> \n` +
+              `<b>📍 Location:</b> <code>Lyceum Hall</code> \n` +
+              `<b>🍿 Anime:</b> <a href="https://en.wikipedia.org/wiki/5_Centimeters_per_Second">Byosoku 5 senchimetoru</a> <b>(Don't tell anyone ok?!😉)</b>\n` +
               `\n` +
               `<b>Please, keep your ticket and don't delete it! \n` +
               `Ticketing system is brought to you by team</b> <a href="https://t.me/madmaids">Mad Maids</a> ...`,
@@ -67,7 +68,13 @@ composer.command("ticket", async (ctx: TelegrafContext) => {
                 [
                   Markup.urlButton(
                     `Add event to Google Calendar`,
-                    `https://calendar.google.com/event?action=TEMPLATE&tmeid=MDM4ZmM1dmRmdm9ha2U0NnVldm1jdDMyaW4gc2FraGliLm9yemtsdkBt&tmsrc=sakhib.orzklv%40gmail.com`
+                    `https://calendar.google.com/event?action=TEMPLATE&tmeid=N2NsdDF1b2hqOG84NDY0bW9vNzdsN3JsazUgc2FraGliLm9yemtsdkBt&tmsrc=sakhib.orzklv%40gmail.com`
+                  ),
+                ],
+                [
+                  Markup.urlButton(
+                    `Add event to Apple Calendar`,
+                    `https://maid.uz/anime.ics`
                   ),
                 ],
               ]),

@@ -5,4 +5,13 @@
  * @types {{eternal: *, temporary: *}}
  */
 
+interface Winners {
+  userid: number;
+  username: string;
+}
+
 export const users: (string | number)[] = [];
+
+export const winners: Winners[] = [];
+
+export const played: number[] = [];

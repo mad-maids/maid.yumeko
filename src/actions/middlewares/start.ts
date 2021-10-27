@@ -6,10 +6,10 @@ import { TelegrafContext } from "@type/telegraf";
 
 composer.start(async (ctx: TelegrafContext) => {
   switch (ctx.startPayload) {
-    case "intranet":
+    case "event":
       await ctx.replyWithHTML(
-        `<b>Ora, ora... Wanna use intranet, aren't ya senpai?! 😏</b>\n` +
-          `<i>Feel free to use command /intranet to access intranet from now so on!</i>`,
+        `<b>Glad to see you here, ${ctx.from.first_name}</b>\n` +
+          `<i>If you want to get your own ticket for the upcoming event, use command</i> /ticket <i>to get yours!</i>`,
         {
           parse_mode: "HTML",
           reply_markup: keyboard.start,
