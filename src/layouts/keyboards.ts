@@ -17,17 +17,9 @@ export const invalid = Markup.inlineKeyboard([
   Markup.callbackButton(`Show available commands`, `help`),
 ]);
 
-export const errorAdmin = Markup.inlineKeyboard([
-  Markup.urlButton(`Contact with admin`, `https://t.me/genemator`),
-]);
-
 export const clubs = async (): Promise<InlineKeyboardMarkup> => {
   return Markup.inlineKeyboard([
     [Markup.urlButton(`Mad Maids`, `https://t.me/madmaids`)],
-    [Markup.urlButton(`WIUT Anime Club`, `https://t.me/animeclubwest`)]
+    [Markup.urlButton(`WIUT Anime Club`, `https://t.me/animeclubwest`)],
   ]);
 };
-
-export const contribute = Markup.inlineKeyboard([
-  [Markup.urlButton(`Organization`, `https://github.com/mad-maids/`)],
-]);

@@ -16,17 +16,6 @@ composer.start(async (ctx: TelegrafContext) => {
         }
       );
       break;
-    case "links":
-      await ctx.replyWithHTML(
-        `<b>Ohayo Senpai! Take those links and find your groups that you will need...</b>` +
-          `\n` +
-          `\n` +
-          `<b>BIS group chats are located at</b> <code>Private Group Chats</code> <b>section!</b>`,
-        {
-          reply_markup: await keyboard.links(),
-        }
-      );
-      break;
     default:
       await ctx.replyWithHTML(message.start, {
         parse_mode: "HTML",
