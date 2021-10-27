@@ -51,15 +51,27 @@ composer.command("ticket", async (ctx: TelegrafContext) => {
               `\n` +
               `<b>💠 Number:</b> <code>${ticket.number}</code> \n` +
               `<b>👤 Username:</b> <code>${ticket.username}</code> <code>(you)</code> \n` +
+              `<b>📆 Date:</b> <code>30/10/2021</code> \n` +
+              `<b>🍿 Anime:</b> <a href="https://en.wikipedia.org/wiki/5_Centimeters_per_Second">Byosoku 5 senchimetoru</a> \n` +
               `\n` +
-              `<b>Please, keep your ticket and don't delete it!</b>`,
+              `<b>Please, keep your ticket and don't delete it! \n` +
+              `Ticketing system is brought to you by team</b> <a href="https://t.me/madmaids">Mad Maids</a> ...`,
             {
               reply_markup: Markup.inlineKeyboard([
-                Markup.urlButton(
-                  `Check out your ticket...`,
-                  `https://t.me/maidsticket/${msg.message_id}`
-                ),
+                [
+                  Markup.urlButton(
+                    `Check out your ticket...`,
+                    `https://t.me/maidsticket/${msg.message_id}`
+                  ),
+                ],
+                [
+                  Markup.urlButton(
+                    `Add event to Google Calendar`,
+                    `https://calendar.google.com/event?action=TEMPLATE&tmeid=MDM4ZmM1dmRmdm9ha2U0NnVldm1jdDMyaW4gc2FraGliLm9yemtsdkBt&tmsrc=sakhib.orzklv%40gmail.com`
+                  ),
+                ],
               ]),
+              disable_web_page_preview: true,
             }
           );
         });
