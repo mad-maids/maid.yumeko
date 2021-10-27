@@ -28,7 +28,10 @@ bot.use(session());
 console.clear();
 
 try {
-  if (env.ENVIRONMENT === "heroku") bot.startPolling();
+  if (env.ENVIRONMENT === "heroku") {
+    bot.telegram.deleteWebhook();
+    bot.startPolling();
+  }
   // bot
   //   .launch({
   //     webhook: {
