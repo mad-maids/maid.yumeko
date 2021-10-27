@@ -24,26 +24,19 @@ composer.command("ticket", async (ctx: TelegrafContext) => {
   if (ctx.from.username) {
     if (!database.users.includes(ctx.from.id)) {
       await ctx.telegram
-        .sendMessage(process.env.TICKET, "🔄 Loading...", {
-          parse_mode: "HTML",
-        })
-        .then(async (msg) => {
-          await ctx.telegram.editMessageText(
-            process.env.TICKET,
-            msg.message_id,
-            null,
-            `<b>🧾 Ticketing Feed!</b> \n` +
-              `\n` +
-              `<b>📶 Number:</b> <code>${msg.message_id}</code> \n` +
-              `<b>💠 Serial:</b> <code>${ticket.number}</code> \n` +
-              `<b>👤 Username:</b> @${ticket.username} \n` +
-              `\n` +
-              `<b>Please, keep your ticket and don't delete it!</b>`,
-            {
-              parse_mode: "HTML",
-            }
-          );
-
+        .sendMessage(
+          process.env.TICKET,
+          `<b>🧾 Ticketing Feed!</b> \n` +
+            `\n` +
+            `<b>💠 Serial:</b> <code>${ticket.number}</code> \n` +
+            `<b>👤 Username:</b> @${ticket.username} \n` +
+            `\n` +
+            `<b>Please, keep your ticket and don't delete it!</b>`,
+          {
+            parse_mode: "HTML",
+          }
+        )
+        .then(async () => {
           await ctx.replyWithHTML(
             `<b>Congratulations!</b> \n` +
               `\n` +

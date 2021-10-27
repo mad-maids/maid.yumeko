@@ -7,7 +7,7 @@ export const start: string =
   `<b>Konichiwa!</b>` +
   `\n` +
   `\n` +
-  `I'm assistant of WIUT Anime Club and I do love gambling very much!` +
+  `I'm assistant of WIUT Anime Club & Mad Maids and I do love gambling very much!` +
   `\n` +
   `\n` +
   `I was created in order to help and with my help, you can do:` +
